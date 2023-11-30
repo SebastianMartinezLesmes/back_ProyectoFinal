@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         $instructorFK = $postData["instructorFK"];
         $linkEvidencias = $postData["linkEvidencias"];
     
-        $query = "INSERT INTO listapeticiones (estado,nota,aprendizFK,instructorFK,linkEvidencias) VALUES ('activo','$nota',$aprendizFK,'$instructorFK','$linkEvidencias')";
+        $query = "INSERT INTO listapeticiones (estado,nota,aprendizFK,instructorFK,linkEvidencias,fechaPeticionInstructor) VALUES ('activo','$nota',$aprendizFK,'$instructorFK','$linkEvidencias',Now())";
     
         if(mysqli_query($conn, $query)){echo "Data inserted sucerfully";}
     }

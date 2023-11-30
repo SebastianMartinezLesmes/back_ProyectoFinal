@@ -3,6 +3,7 @@ require 'conexion.php';
 
 $query = "SELECT
     lc.idCitacion AS idCita,
+    ap.idUsuario AS idA,
     ap.nombre AS aprendiz,
     ap.TI AS tipoDocumento,
     ap.numeroTI AS numeroTI,
